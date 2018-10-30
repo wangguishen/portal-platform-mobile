@@ -1,0 +1,189 @@
+.content_box{
+	padding-top: 46px;
+    box-sizing: border-box;
+}
+#page_box{
+	min-height:100%;
+    position: relative;
+    overflow: auto;
+	.container_top{
+		margin-top: 46px;
+		overflow-y: scroll;
+	}
+}
+.urlLink .group_cell .weui-cell,.home .weui-cell,.sysgover .weui-cell,.jurisdiction .weui-cell,.orgcha .weui-cell,.operation .weui-cell,.link_monitoring .weui-cell{//改变cell的样式
+	padding:0 1rem;
+	font-size: 1rem;
+}
+.home .weui-cell{
+	background: #35495e;
+}
+.weui-cell_access.vux-cell-box{//更改cell-box的样式
+	padding:0.8rem 2rem;
+}
+.weui-cells{//去掉cell的margintop
+	margin-top: 0;
+}
+#page_box .weui-cells{//去掉cell的margintop
+	margin-top: 0;
+}
+.weui-tab__panel{//去掉页面下面空白
+	padding-bottom: 0;
+}
+.weui-loadmore{//无限加载样式
+	margin: .5rem auto;
+}
+.weui-loadmore_line{
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+}
+
+// header
+#header_box .vux-header .vux-header-left{
+	left: .8rem;
+}
+
+.search_box{
+	position: fixed !important;
+	top: 46px;
+	z-index:1000;
+}
+
+//orgcha
+.orgcha .first_cell,.orgcha .first_cells label{
+	padding-left: 2rem;
+}
+.orgcha .double_cell,.orgcha .double_cells label{
+	padding-left: 3rem;
+}
+.orgcha .triple_cell,.orgcha .triple_cells label{
+	padding-left: 4rem;
+}
+.orgcha .ultra_cell,.orgcha .ultra_cells label{
+	padding-left: 5rem;
+}
+.orgcha .penta_cell,.orgcha .penta_cells label{
+	padding-left: 6rem;
+}
+.orgcha .hexa_cell,.orgcha .hexa_cells label{
+	padding-left: 7rem;
+}
+.orgcha .lucky_cell,.orgcha .lucky_cells label{
+	padding-left: 8rem;
+}
+.orgcha .weui-cell{
+	border-bottom: 1px solid #D9D9D9;
+}
+.relevance .weui-cell{
+	border-bottom: none;
+}
+.orgcha .iconfont,.link_monitoring .iconfont{
+	font-size: 1.5rem;
+}
+.accredit.first_cell,.orgcha .first_cells label{
+	padding-left: 3rem;
+}
+.orgcha .double_cell,.orgcha .double_cells label{
+	padding-left: 4.5rem;
+}
+// 特殊区域  起至突出效果
+.user_styl{
+	font-weight:bold;
+}
+// 用户角色管理
+.user_search p{
+	margin:0;
+	padding:0;
+}
+// 运维服务 -- 首页（operationGover）
+.operation .first_cell{
+	padding-left: 2rem;
+	color: #666;
+}
+// urllink
+.lab_sys{
+	position: fixed;
+	top:90px;
+	left:0;
+	z-index:1000;
+	width:100%;
+}
+.jurisdictions .vux-cell-primary .vux-label{
+	padding-left: 15px;
+}
+.jurisdiction .weui-cells .sub-item{
+	padding-left: 50px;
+}
+//登录全屏遮盖显示加载符
+.full_toast_bg{
+	background-color: rgba(0,0,0,.3);
+}
+.full_toast_fixed{
+	margin-top: -3.8em;
+}
+.addAdmin .weui-cells{
+	margin:0;
+}
+// cell右侧的值范围读取  --  特定relevan  不是全部
+.relevan .weui-cell__ft{
+	width:50%;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    // box-sizing: border-box;
+}
+
+.g-show-dowm .weui-cell_access .weui-cell__ft{
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.g-show-dowm .g-show-time .weui-cell{
+	padding:0 15px;
+}
+
+.p-load-show .weui-toast .weui-toast__content{
+	display: none;
+}
+
+// 企业logo
+.s-company-box{
+	.g-company-logo{
+		#targetContainer{
+			.multi-picker-btn-box{
+				background-color:#fbf9fe;
+				height:3.2rem;
+				line-height: 3.2rem;
+			}
+			#multi-picker-btn-cancel{
+				font-size: 16px;
+				color:#828282;
+			}
+			#multi-picker-btn-save-targetContainer{
+				font-size: 16px;
+				color:#04BE02;
+			}
+		}
+	}
+	.weui-cell{
+		padding: 10px 17px 10.8px 17px;
+		.vux-popup-picker-value,.vux-popup-picker-placeholder{
+			font: 400 13.3333px Arial;
+			color:#999999;
+		}
+	}
+}
+/* 注册关联主题 */
+.weui-cell__bd .weui-textarea::-webkit-input-placeholder {
+	text-align: right
+}
+/* 日志展示详情 */
+.logsDetail .weui-cell .weui-cell__bd .weui-textarea{
+	color: #999;
+}
+/* 信息日志标题样式 */
+.logsDetail .vux-x-textarea .weui-cell__hd .weui-label {
+	font-weight: lighter;
+	color: #000;
+}

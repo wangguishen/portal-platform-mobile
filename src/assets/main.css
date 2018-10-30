@@ -1,0 +1,10 @@
+.content_box{
+	padding-top: 46px;
+    box-sizing: border-box;
+}
+#page_box{
+	height:100%;
+}
+.container_top{
+	margin-top: 46px;
+}

@@ -1,0 +1,76 @@
+  .slide-transition {
+    transition: all 1s ease;
+  }
+  .slide-enter {
+    transform: translate3d(100%, 0, 0);
+    opacity: .3;
+  }
+  .slide-leave {
+    transform: translate3d(-100%, 0, 0);
+    opacity: .3;
+  }
+
+  .back-transition {
+    transition: all .3s ease;
+  }
+  .back-enter {
+    transform: translate3d(-100%, 0, 0);
+    opacity: .3;
+  }
+  .back-leave {
+    transform: translate3d(100%, 0, 0);
+    opacity: .3;
+  }
+
+.home-mask{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: transparent;
+    z-index: 99;
+    opacity: 0;
+}
+
+.faded-transition {
+  /*width: 1.7rem;
+  margin: 8px auto;*/
+}
+.faded-enter {
+  animation: faded-in .2s;
+}
+.faded-leave {
+  animation: faded-out .2s;
+}
+@keyframes faded-in {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 1rem;
+  }
+}
+@keyframes faded-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.vux-drawer > .drawer-left{
+  transform: translate3d(-100%,0,0);
+}
+.vux-drawer > .vux-drawer-active{
+  transform: translate3d(0%,0,0);
+}

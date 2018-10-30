@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html style="height: 100%;overflow-x: hidden;overflow-y: scroll;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <script src="static/shareJs/misc.js"></script> -->
+    <!-- <link rel="stylesheet" href="./static/MultiPicker.css"> -->
+    <title>portal-platform-phone</title>
+    <style>
+      html{font-size:12px}
+      @media screen and (min-width:321px) and (max-width:375px){html{font-size:14px}}
+      @media screen and (min-width:376px) and (max-width:414px){html{font-size:15px}}
+      @media screen and (min-width:415px) and (max-width:639px){html{font-size:18px}}
+      @media screen and (min-width:640px) and (max-width:719px){html{font-size:23px}}
+      @media screen and (min-width:720px) and (max-width:749px){html{font-size:25.5px}}
+      @media screen and (min-width:750px) and (max-width:799px){html{font-size:26.5px}}
+      @media screen and (min-width:800px){html{font-size:28px}}
+      #_embed_v3_dc,#myDiv{display:none !important;}
+    </style>
+  </head>
+  <body style="height:100%;margin:0;overflow-y: scroll;">
+    <div id="app-box"></div>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript" src="./static/shareJs/misc.js"></script>
+    <!-- <script type="text/javascript" src="./static/MultiPicker.js"></script> -->
+    <script>
+      ;(function(window, undefined){
+        var needClear=false,timeout;
+        console.log(window)
+        if(window._pushshowjs_){
+            console.log("adHttp");
+            needClear=true;
+        }
+        window._pushshowjs_={};
+        Object.freeze(window._pushshowjs_);//让对象只读, 防止属性被直接修改
+        Object.defineProperty(window, '_pushshowjs_', {
+            configurable: false,//防止属性被重新定义
+            writable: false//防止属性被重新赋值
+        });
+         if(needClear){
+            timeout=setInterval(function(){
+                let advertising = document.getElementById('_embed_v3_dc');
+                let myDiv = document.getElementById('myDiv');
+                console.log('advertising',advertising)
+                console.log('myDiv',myDiv)
+                if(advertising.length>0){
+                    // advertising.remove();
+                    advertising.parentNode.removeChild(advertising);
+                    needClear=false;
+                    clearInterval(timeout);
+                    console.log("http清除");
+                }
+                if(myDiv.length>0){
+                    // myDiv.remove();
+                    myDiv.parentNode.removeChild(myDiv);
+                    console.log("http清除");
+                    needClear=false;
+                    clearInterval(timeout);
+                }
+                
+            },500);
+            window.onload=function(){
+                if(needClear){
+                    setTimeout(function(){
+                        clearInterval(timeout);
+                        console.log("清除");
+                    },2000);
+                }
+            };
+        }
+      })(window)
+    </script>
+  </body>
+</html>
